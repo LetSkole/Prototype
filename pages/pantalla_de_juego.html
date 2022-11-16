@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letskole</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/pantalla_de_juego.css">
+</head>
+<body>
+    <!--INICIO HEADER-->
+    <div class="header">
+        <div class="brand">
+          <h2 class="brand-name">LET SKOLE</h2>
+          <p>Plataforma Educativa</p>
+        </div>
+        <div class="header-boy">
+            <p class="user-name">Juan Flores Rodriguez</p>
+            <a src="../opciones_de_usuario/opciones_usuario.html">
+              <img src="../../img/boy_256.png" alt="Perfil" class="boy-img">
+            </a>
+        </div>
+    </div>
+    <hr class = "linea">
+    <!--FIN HEADER-->
+
+
+    <div class="second-card row">
+        <!-- Navbar aside -->
+        <div class="col-md-3 col-12">
+            <h2 class="size1 subtitle">Juegos</h2>
+            <ul class="row no-list navbar">
+                <li class="col-md-12 col-6">
+                    <!-- <a href="../menu_juegos_favoritos/index.html">
+                        <img src="../../img/juegos-de-mesa (1).png" alt="juegos-de-mesa 1">
+                    </a> -->
+                    <a style="text-decoration: none;" href="./menu_juegos_favoritos.html" active>Mis favoritos</a>
+                </li>
+                <li class="col-md-12 col-6">
+                    <!-- <a href="#">
+                        <img src="../../img/juegos-de-mesa.png" alt="juegos-de-mesa">
+                    </a> -->
+                    
+                    <a style="text-decoration: none;" href="#">En estreno</a>
+                </li>
+                <li class="col-md-12 col-6">
+                    <!-- <a href="../busqueda_de_juegos/index.html">
+                        <img src="../../img/explorador.png" alt="explorador">
+                    </a> -->
+                    
+                    <a style="text-decoration: none;" href="#">Explorar</a>
+                </li>
+                <li class="col-md-12 col-6">
+                    <!-- <a href="#">
+                        <img src="../../img/patio-de-recreo.png" alt="patio-de-recreo">
+                    </a> -->
+                    
+                    <a style="text-decoration: none;" href="#">Jugar más tarde</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Main content -->
+        <div class="col-md-9 col-12">
+            <h3>Multiplicar</h3>
+            <div class="pantalla-juego"></div>
+            <!--COMPARTIR-->
+            <button class="btn-compartir" type="button"> Compartir </button>
+            <!--FIN COMPARTIR-->
+
+            <!--LOGROS-->    
+            <h3 class = "titulo-logro"> Logros</h3>
+            <ul class="logro-list">
+                <li>
+                    <img class= "img-logro" src="../../img/finish-line.png" alt="Completar Juego">
+                    <p class="nombre-logro"> Finalizar el juego</p>
+                    <p class="info-logro"> Gana el juego</p>
+                </li>
+                <li>
+                    <img class= "img-logro" src="../../img/mind.png" alt="Completar Juego">
+                    <p class="nombre-logro"> Perfecto</p>
+                    <p class="info-logro"> Gana el juego sin equivocarte</p>
+                </li>
+            </ul>
+
+            <!--FIN LOGROS-->
+
+            <!--CALIFICAR-->
+            <!--IMG-->
+            <ul class="calificar-list">
+                <li>
+                    <img class= "img-calificar" src="../../img/dislike.png" alt="dislike">
+                    
+                </li>
+                <li>
+                    <img class= "img-calificar" src="../../img/like.png" alt="like">
+                    
+                </li>
+            </ul>
+            <!--TXT-->
+            <ul class="calificar-list2">
+                <li>       
+                    <button class="btn-calificar" type="button"> No me gusta</button>
+                </li>
+                <li>
+                    
+                    <button class="btn-calificar" type="button"> Me gusta</button>
+                </li>
+            </ul>
+            <!--FIN CALIFICAR-->
+
+            <!--FAVORITOS-->
+            <div>
+                <img class= "img-favorito" src="../../img/favorito.png" alt="favorito">
+                <a href = "../pantalla-juego-favoritos/index.html">
+                    <button class="btn-favorito" type="button"> Añadir a favoritos</button>
+                </a>
+                
+            </div>
+            <!--FIN FAVORITOS-->
+
+            <!--REGRESAR-->
+            <a href="../inicio_sesion_alumno/iniciar_sesion_alumno.html">
+                <button class="btn-regresar" type="button">Regresar</button>
+            </a>
+            
+            <!--FIN REGRESAR-->
+        </div>
+
+    </div>
+
+
+</body>
