@@ -1,13 +1,29 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     
-}
+} */
 
-body{
+
+/* body{
     font-family: "Roboto",sans-serif;
+} */
+
+.card-game {
+    text-align: center;    
+    border: 2px solid white;
+    border-radius: 5px;
+    height: 200px;
 }
 
+.card-game:hover, .card-game:active {
+    box-shadow: 0px 0px 10px gray;
+}
+
+
+.option:hover, .option:active {
+    background-color: black;
+}
 
 /*INICIO HEADER*/
 
