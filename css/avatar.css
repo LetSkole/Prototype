@@ -9,6 +9,7 @@ body{
 }
 
 
+
 /*INICIO HEADER*/
 
 .nav{
@@ -124,6 +125,11 @@ label {
 }
 
 /*Media Querys*/
+@media (max-width: 767px) {
+    .avatar-body{
+        background-color: white;
+    }
+}
 @media only screen and (min-width: 768px) {
     .main-card{
         width: 600px;

@@ -41,7 +41,7 @@
     color: #000000;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 374px) {
 
     .header-opciones{
         gap: 35px;
