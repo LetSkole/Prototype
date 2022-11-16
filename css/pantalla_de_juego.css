@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
 
 body{
@@ -84,26 +83,12 @@ body{
 /*FIN HEADER*/
 
 /*PANTALLA JUEGO*/
-.titulo-juego{
-    
-    padding-top: 11px;
-    padding-left: 22px;
-    
-    font-family: 'Lexend';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 38px;
-}
 .pantalla-juego{
-    
-
-
-    width: 380px;
-    height: 179px;
+    width: 80%;
+    height: 200px;
     display: block;
     margin-top: 8px;
-    margin-left: 22px;
+    margin-left: auto;
     margin-right: 28px;
 
     background: #D9D9D9;
@@ -112,11 +97,11 @@ body{
 
 /*BOTÓN COMPARTIR*/
 .btn-compartir{
-    font-family: 'Lexend';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 19px;
+    /* font-family: 'Lexend'; */
+    /* font-style: normal; */
+    /* font-weight: 400; */
+    /* font-size: 15px; */
+    /* line-height: 19px; */
 
     width: 114px;
     height: 31px;
@@ -124,7 +109,9 @@ body{
     background: #7BD5FB;
     border-radius: 5px;
 
-    margin-left: 276px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     margin-top: 12px;
 }
 /*FIN BOTÓN COMPARTIR*/
@@ -132,13 +119,13 @@ body{
 /*LOGROS*/
 .titulo-logro{
     
-    font-family: 'Lexend';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
+    /* font-family: 'Lexend'; */
+    /* font-style: normal; */
+    /* font-weight: 700; */
+    /* font-size: 30px; */
     line-height: 38px;
-    padding-left: 22px;
-    padding-top: 6px;
+    /* padding-left: 22px; */
+    /* padding-top: 6px; */
 }
 .logro-list{
     
@@ -177,9 +164,7 @@ body{
 /*FIN LOGROS*/
 
 /*CALIFICAR*/
-.calificar-list{
-    
-    
+.calificar-list{    
     display: flex;
     align-items: center;
     list-style: none;
@@ -195,9 +180,7 @@ body{
     max-height: 64px;
     
 }
-.calificar-list2{
-    
-    
+.calificar-list2{    
     display: flex;
     align-items: center;
     list-style: none;
@@ -212,7 +195,6 @@ body{
 .btn-calificar{
     width: 94px;
     height: 19px;
-
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 400;

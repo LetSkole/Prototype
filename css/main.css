@@ -245,6 +245,15 @@
     justify-content: center;
 }
 
+.button-cargar-mas {
+    width: 120px;
+    font-size: 0.8em;
+    position: static;
+    background-color: rgba(211,195,255,0.53);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .button-regresar {
     width: 100px;
     position: static;
@@ -290,6 +299,12 @@
         background-color: rgba(211,195,255,0.53);
         bottom: 50px;
         right: 50px;
+    }
+    .button-cargar-mas {
+        position: absolute;
+        background-color: rgba(211,195,255,0.53);
+        bottom: 50px;
+        right: 180px;
     }
 }
 /* @media (max-width:374px){
