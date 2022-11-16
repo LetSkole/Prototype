@@ -222,9 +222,8 @@ body{
     font-weight: 400;
     font-size: 15px;
     line-height: 19px;
-
-    margin-left: 149.59px;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 /*FIN FAVORITOS*/
 
@@ -243,6 +242,8 @@ body{
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-   
+    margin-left: auto;
+    margin-right: auto;   
+    text-decoration: none;
 }
 /*FIN REGRESAR*/
