@@ -1,30 +1,3 @@
-/* .contenedor{
-    display: inline-flex;
-    gap: 20vw;
-    overflow: hidden;
-} */
-/* 
-.title h2,p{
-    font-size: 25px;
-} */
-
-/* .contenedor img{
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-.title {
-    margin: auto;
-    text-align: center;
-}
-
-.texto {
-    margin-left: 20px; 
-    margin-right: 20px; 
-    font-size: 20px;
-    text-align: justify;
-} */
 
 #button-aceptar {
     padding: 15px;
@@ -42,91 +15,35 @@
     text-align: center;
 }
 
-/* 
-@media (max-width:374px){
-    .contenedor img{
-        max-width: 32px;
-        max-height: 32px; 
-       }
-    .title h2,p{
-        font-size: 25px;
-    }
-    .contenedor{
-        gap:5vw;
-    }
-
-
+.title-r{
+    text-align: center;
+    padding-top: 30px;
 }
 
-@media (min-width:375px){
-    .contenedor img{
-        max-width: 32px;
-        max-height: 32px;
+@media (min-width: 320px) {
+    .title-r{
+        margin-right: 50px;
+        margin-top: 15px;
     }
-    .contenedor{
-        gap:10vw;
-    }
-    .title h2,p{
-        font-size: 25px;
-    }
-
+    
 }
 
-@media (min-width:425px){
-    .contenedor img{
-        max-width: 36px;
-        max-height: 36px;
+@media (min-width: 375px) {
+    .title-r{
+        margin-right: 80px;
+        margin-top: 15px;
     }
-    .contenedor{
-        gap:10vw;
+    
+}
+@media (min-width: 425px) {
+    .title-r{
+        margin-right: 105px;
+        margin-top: 15px;
     }
-    .title h2,p{
-        font-size: 28px;
-    }
-
-
 }
 
-
- @media (min-width:768px){
-    .contenedor img{
-        max-width: 44px;
-        max-height: 44px;
+@media only screen and (min-width: 768px) {
+    .title-r{
+        margin-right: 150px;
     }
-    .contenedor{
-        gap:20vw;
-    }
-    .title h2,p{
-        font-size: 35px;
-    }
-
 }
-
-@media (min-width:1024px){
-    .contenedor img{
-        max-width: 44px;
-        max-height: 44px;
-    }
-    .contenedor{
-        gap:25vw;
-    }
-    .title h2,p{
-        font-size: 35px;
-    }
-
-}
-
-@media (min-width:1440px){
-    .contenedor img{
-        max-width: 48px;
-        max-height: 48px;
-    }
-    .contenedor{
-        gap:30vw;
-    }
-    .title h2,p{
-        font-size: 55px;
-    }
-
-
-} */
