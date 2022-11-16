@@ -85,8 +85,6 @@
     max-width: 180px;
     margin-left: auto;
     margin-right: auto;
-
-
 }
 
 .game-img{
@@ -142,6 +140,10 @@
     margin-top: 10px;
     border: none;
     padding: 5px;
+}
+
+.aside {
+    display: none;
 }
 
 /* Navbar */
@@ -296,5 +298,8 @@
     }
     .title{
         margin-right: 115px;
+    }
+    .aside {
+        display: block;
     }
 }
