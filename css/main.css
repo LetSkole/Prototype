@@ -3,6 +3,7 @@
 /* carta responsive */
 .main-card {
     width: 100vw;
+    height: 100vh;
     background-color: white;
     display: block;
     position: relative;
@@ -12,6 +13,7 @@
 
 .second-card {
     width: 100vw;
+    height: 90vh;
     padding: 20px;
     background-color: white;
     display: block;
@@ -52,6 +54,10 @@
 .user-name {
     display: none;
     margin-right: 20px;
+}
+
+.linea{
+    border-top: 2px solid black;
 }
 
 /* Clases genéricas como listo sin estilo o texto centrado */
@@ -153,6 +159,14 @@
 
 
 /* button */
+.bottom-button {
+    position: absolute;
+    width: 90%;
+    bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .button-a {
     text-align: center;
     text-decoration: none;
@@ -179,19 +193,13 @@
 
 .button-cargar-mas {
     width: 120px;
-    font-size: 0.8em;
-    position: static;
     background-color: rgba(211,195,255,0.53);
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 10px;
 }
 
 .button-regresar {
     width: 100px;
-    position: static;
     background-color: rgba(211,195,255,0.53);
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* .button-regresar {
@@ -253,26 +261,19 @@
     }
     .second-card{
         width: 94vw;
+        height: 75vh;
         margin-top: 5vh;
         margin-bottom: 5vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+
         border: 1px solid black;
         border-radius: 50px;
     }
     .user-name {
         display: inline;
     }
-    .button-regresar {
-        position: absolute;
-        background-color: rgba(211,195,255,0.53);
-        bottom: 50px;
-        right: 50px;
-    }
-    .button-cargar-mas {
-        position: absolute;
-        background-color: rgba(211,195,255,0.53);
-        bottom: 50px;
-        right: 180px;
-    }
+    
     p{
         font-size: 18px;  
     }
@@ -291,7 +292,6 @@
     }
     .logo-img{
         width: 224px;
-        margin-top: 10%;
     }
     .size2{
         font-size: 25px;

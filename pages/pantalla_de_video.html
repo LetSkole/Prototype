@@ -31,8 +31,13 @@
         <!-- Main content -->
         <h3>Multiplicar</h3>
         <div class="row">
-            <div class="col-12 col-md-7 pantalla-juego">
-            </div>
+            <!-- <iframe class="col-12 col-md-7 pantalla-juego" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
+            <iframe class="col-12 col-md-7 pantalla-juego"
+                 src="https://www.youtube.com/embed/YFtEaVw5k1A"
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen></iframe>
             <div class="col-12 col-md-5">
                 <p><label for="notas">Notas</label></p>
                 <p><textarea id="notas" rows="5" cols="40" style="resize: none;"></textarea></p>
@@ -54,16 +59,6 @@
         <h3 class = "titulo-logro"> Logros</h3>
         <ul class="row no-list">
             <li class="col-6 col-md-3">
-                <img class= "img-logro" src="../img/finish-line.png" alt="Completar Juego">
-                <p class="nombre-logro"> Finalizar el juego</p>
-                <p class="info-logro"> Gana el juego</p>
-            </li>
-            <li class="col-6 col-md-3">
-                <img class= "img-logro" src="../img/mind.png" alt="Completar Juego">
-                <p class="nombre-logro"> Perfecto</p>
-                <p class="info-logro"> Gana el juego sin equivocarte</p>
-            </li>
-            <li class="col-6 col-md-3">
                 <img class= "img-calificar" src="../img/dislike.png" alt="dislike">
                 <button class="btn-calificar" type="button"> No me gusta</button>
             </li>
@@ -76,8 +71,8 @@
 
         <!--FAVORITOS-->
         <div>
-            <a href = "./pantalla_juego_favoritos.html" style="text-decoration: none;">
-                <img class= "img-favorito" src="../img/favorito.png" alt="favorito" style="border: red;">
+            <img class= "img-favorito" src="../img/favorito.png" alt="favorito">
+            <a href = "#" style="text-decoration: none;">
                 <button class="btn-favorito" type="button"> Añadir a favoritos</button>
             </a>
             
@@ -85,7 +80,7 @@
         <!--FIN FAVORITOS-->
 
         <!--REGRESAR-->
-        <a href="./iniciar_sesion_alumno.html" style="text-decoration: none;">
+        <a href="./ventana_de_videos.html" style="text-decoration: none;">
             <button class="btn-regresar" type="button">Regresar</button>
         </a>
         

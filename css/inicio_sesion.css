@@ -13,13 +13,6 @@ body{
     padding: 15px;
 }
 
-.linea{
-    position: absolute;
-    width: 100%;
-    border: 2px solid #000000;
-    margin: 0px;
-}
-
 .clearfix{
     background-color: rgba(0,214,201,0.15);
     display: flex;

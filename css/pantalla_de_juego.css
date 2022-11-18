@@ -1,13 +1,26 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 
 body{
     font-family: "Roboto",sans-serif;
 }
 
+.second-card {
+    height: auto;
+}
 
+p, strong {
+    text-align: center;
+}
+
+.btn-save{
+    display: block;
+    width: 80px;
+    margin-left: auto; 
+    margin-right: auto;
+}
 /*INICIO HEADER*/
 
 .nav{
@@ -73,18 +86,11 @@ body{
     align-items: center;
     text-align: center;
 }
-.linea{
-    position: absolute;
-    width: 100%;
-
-    border: 1px solid #000000;
-}
-
 /*FIN HEADER*/
 
 /*PANTALLA JUEGO*/
 .pantalla-juego{
-    height: 130px;
+    height: 180px;
     display: block;
     margin-top: 8px;
     margin-left: auto;
@@ -172,10 +178,13 @@ body{
     
 }
 
-.logro-list .img-logro{
-    max-width: 100px;
-    max-height: 100px;
+.logro-list, .img-logro, .img-calificar{
+    max-width: 70px;
+    max-height: 70px;
     border-radius: 8px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 /*FIN LOGROS*/
 
@@ -216,14 +225,19 @@ body{
     font-weight: 400;
     font-size: 15px;
     line-height: 19px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 /*FIN CALIFICAR*/
 
 /*FAVORITOS*/
 .img-favorito{
-    width: 64.41px;
+    /* width: 64.41px; */
     height: 55.71px;
-    padding-left: 187.83px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 2px;
 }
 
