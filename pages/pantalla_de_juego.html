@@ -9,6 +9,105 @@
     <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/pantalla_de_juego.css">
     <link rel="stylesheet" href="../css/opciones_usuario.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <script>
+
+        let timeLeft = 60;
+        let timerInterval;
+        let scoreCorrect = 0;
+        let scoreWrong = 0;
+        let correctAnswer = 0;
+
+        window.onload = function () {
+            document.getElementById("btn1").disabled = true;
+            document.getElementById("btn2").disabled = true;
+            document.getElementById("btn3").disabled = true;
+            document.getElementById("btn4").disabled = true;
+        }
+
+        function startGame() {
+            document.getElementById("btn1").disabled = false;
+            document.getElementById("btn2").disabled = false;
+            document.getElementById("btn3").disabled = false;
+            document.getElementById("btn4").disabled = false;
+            
+            nextQuestion();
+            document.getElementById("startBtn").disabled=true;
+
+            let timeDisplay = document.getElementById("timeDisplay");
+            timeDisplay.hidden = false;
+
+            
+            timerInterval = setInterval(function(){
+                timeLeft -= 1;
+                timeDisplay.innerHTML = "Time Left: " + timeLeft; 
+                if(timeLeft == 0) {
+                    clearInterval(timerInterval);
+
+                    document.getElementById("btn1").disabled = true;
+                    document.getElementById("btn2").disabled = true;
+                    document.getElementById("btn3").disabled = true;
+                    document.getElementById("btn4").disabled = true;
+                }
+            }, 1000);
+        }
+
+        function nextQuestion() {
+            let operationDiv = document.getElementById("operation");
+            let firstNum = Math.ceil(Math.random() * 12);
+            let secondNum = Math.ceil(Math.random() * 12);
+            correctAnswer = firstNum * secondNum;
+            operationDiv.innerHTML = firstNum + " x " + secondNum;
+            
+            // Set the buttons to have random answer and one should be the
+            // correct answer
+            let random_numbers = [correctAnswer];
+
+            function choiceDifferentNumber(random_numbers) {
+                for(let i = 0; i < 4; i++){
+
+                    var find_number = false;
+                    while(!find_number) {
+                        let num = Math.ceil(Math.random() * 144);
+                        let valid = true;
+                        for(let i = 0; i < random_numbers.Length; i++){
+                            if(num == random_numbers[i]){
+                                valid = false;
+                            }
+                        }
+                        if(valid == true) {
+                            find_number = true;
+                            random_numbers.push(num);
+                        }
+                    }
+                }
+                return random_numbers;
+            }
+            console.log(random_numbers);
+            random_numbers = choiceDifferentNumber(random_numbers);
+            console.log(random_numbers);
+            document.getElementById("btn1").innerHTML = random_numbers[1];
+            document.getElementById("btn2").innerHTML = random_numbers[2];
+            document.getElementById("btn3").innerHTML = random_numbers[3];
+            document.getElementById("btn4").innerHTML = random_numbers[4];
+            
+            let correctAnswerIndex = Math.floor(Math.random()*4) + 1; // 1 2 3 4
+            let correctAnswerID = "btn" + correctAnswerIndex;
+            document.getElementById(correctAnswerID).innerHTML = correctAnswer;
+
+        }
+
+        function checkAnswer(buttonIndex) {
+            let answer = document.getElementById("btn"+buttonIndex).innerHTML;
+            if (answer == correctAnswer) scoreCorrect += 1;
+            else scoreWrong += 1;
+            
+            document.getElementById("scoreCorrect").innerHTML = "Correct score: " + scoreCorrect;
+            document.getElementById("scoreWrong").innerHTML = "Wrong score: " + scoreWrong;
+            
+            nextQuestion();
+        }
+    </script>
 </head>
 <body>
     <!--INICIO HEADER-->
@@ -61,16 +160,46 @@
     <hr class="linea">
     <!--FIN HEADER-->
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <img src="../img/favorito.png"  class="game-img-big" alt="favoritos">
+            <p>SE HA AGREGADO A TUS FAVORITOS</p>
+            <button class="btn-back">Regresar</button>
+        </div>
+    </div>
 
     <div class="second-card">
         <!-- Main content -->
         <h3>Multiplicar</h3>
         <div class="row">
+            <!-- Game was modified from (Mr. Soderquist): https://www.youtube.com/watch?v=lrInxLh4Hyg -->
             <div class="col-12 col-md-7 pantalla-juego">
+                <ul class="row no-list">
+                    <li class="col-3"><button id="startBtn" onclick="startGame()">START</button></li>
+                    <li id="scoreCorrect" class="col-3">Correct answers: 0</li>
+                    <li id="scoreWrong" class="col-3">Wrong answers: 0</li>
+                    <li id="timeDisplay" class="col-3" hidden>Time left: 60</li>
+                </ul>
+                <h4>¿Cuál es la respuesta correcta?</h4>
+                <div class="row">
+                    <div id="operation" class="col-3 big">
+                        0 x 0
+                    </div>
+                    <div class="col-9 row">
+                        <button class="col-3" onClick="checkAnswer(1)" id="btn1">0</button>
+                        <button class="col-3" onClick="checkAnswer(2)" id="btn2">0</button>
+
+                        <button class="col-3" onClick="checkAnswer(3)" id="btn3">0</button>
+                        <button class="col-3" onClick="checkAnswer(4)" id="btn4">0</button>
+                    </div>
+                </div>
             </div>
+
             <div class="col-12 col-md-5">
                 <p><label for="notas">Notas</label></p>
-                <p><textarea id="notas" rows="5" cols="40" style="resize: none;"></textarea></p>
+                <p><textarea id="notas" rows="5" cols="40" style="resize: none; padding: 5px;"></textarea></p>
                 <button class="btn-save">Guardar</button>
             </div>
         </div>
@@ -111,9 +240,10 @@
 
         <!--FAVORITOS-->
         <div>
-            <a href = "./pantalla_juego_favoritos.html" style="text-decoration: none;">
+            <!-- <a href = "./pantalla_juego_favoritos.html" style="text-decoration: none;"> -->
+            <a style="text-decoration: none;">
                 <img class= "img-favorito" src="../img/favorito.png" alt="favorito" style="border: red;">
-                <button class="btn-favorito" type="button"> Añadir a favoritos</button>
+                <button id="myBtn" class="btn-favorito"> Añadir a favoritos</button>
             </a>
             
         </div>
@@ -127,6 +257,34 @@
         <!--FIN REGRESAR-->
     </div>
 
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the Modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("btn-back")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            console.log(modal);
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        // window.onclick = function(event) {
+        //     if(event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
+    </script>
 
 </body>
 </html>
