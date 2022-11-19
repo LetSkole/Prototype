@@ -160,12 +160,24 @@
     <hr class="linea">
     <!--FIN HEADER-->
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
+    <!-- The Modal Favoritos -->
+    <div id="myModalFavoritos" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
             <img src="../img/favorito.png"  class="game-img-big" alt="favoritos">
             <p>SE HA AGREGADO A TUS FAVORITOS</p>
+            <button class="btn-back">Regresar</button>
+        </div>
+    </div>
+
+    <!-- The Modal Compartir -->
+    <div id="myModalCompartir" class="modal">        
+        <!-- Modal content -->
+        <div class="modal-content">
+            <img src="../img/matematicas.png"  class="game-img-big" alt="favoritos">
+            <p style="font-size: 10px;">Multiplicaciones</p>
+            <p>Comparte el juego con tus amigos, solo copian do el siguiente link:</p>
+            <p class="link-compartir">letskole/compartir/multiplicaciones<button><img src="../img/copy.png" width="15" height="15"></button></p>
             <button class="btn-back">Regresar</button>
         </div>
     </div>
@@ -209,7 +221,9 @@
                 <a href="Juego_Reportado_Reportar.html" class="btn-reportar">Reportar</a>
             </li>
             <li class="col-6" style="padding-top: 0px; padding-bottom: 0px;">
-                <a href="#" class="btn-compartir">Compartir</a>
+                <button id="myBtnCompartir" class="btn-compartir">
+                    Compartir
+                </button>
             </li>
         </ul>
         <!--FIN COMPARTIR-->
@@ -243,7 +257,7 @@
             <!-- <a href = "./pantalla_juego_favoritos.html" style="text-decoration: none;"> -->
             <a style="text-decoration: none;">
                 <img class= "img-favorito" src="../img/favorito.png" alt="favorito" style="border: red;">
-                <button id="myBtn" class="btn-favorito"> Añadir a favoritos</button>
+                <button id="myBtnFavoritos" class="btn-favorito"> Añadir a favoritos</button>
             </a>
             
         </div>
@@ -259,23 +273,34 @@
 
     <script>
         // Get the modal
-        var modal = document.getElementById("myModal");
+        var modalFavoritos = document.getElementById("myModalFavoritos");
+        var modalCompartir = document.getElementById("myModalCompartir");
 
         // Get the button that opens the Modal
-        var btn = document.getElementById("myBtn");
+        var btnFavoritos = document.getElementById("myBtnFavoritos");
+        var btnCompartir = document.getElementById("myBtnCompartir");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("btn-back")[0];
+        var span0 = document.getElementsByClassName("btn-back")[0];
+        var span1 = document.getElementsByClassName("btn-back")[1];
 
-        // When the user clicks the button, open the modal
-        btn.onclick = function() {
-            console.log(modal);
-            modal.style.display = "block";
+
+        // When the user clicks the button, open the modal Favoritos
+        btnFavoritos.onclick = function() {
+            modalFavoritos.style.display = "block";
+        }
+
+        // When the user clicks the button, open the modal Compartir
+        btnCompartir.onclick = function() {
+            modalCompartir.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
+        span0.onclick = function() {
+            modalFavoritos.style.display = "none";
+        }
+        span1.onclick = function() {
+            modalCompartir.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
