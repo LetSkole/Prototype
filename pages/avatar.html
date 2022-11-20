@@ -7,24 +7,57 @@
         <link rel="stylesheet" href="../css/avatar.css" />
         <link rel="stylesheet"href="../css/grid.css"/>
         <link rel="stylesheet"href="../css/main.css"/>
+        <link rel="stylesheet" href="../css/opciones_usuario.css">
     </head>
     <body class="avatar-body">
 
         <!--INICIO HEADER-->
         <div class="header">
             <div class="brand">
-              <h2 class="brand-name">LET SKOLE</h2>
-              <p>Plataforma Educativa</p>
+            <h1 class="brand-name">LET SKOLE</h1>
+            <p>Plataforma Educativa</p>
             </div>
             <div class="header-boy">
                 <p class="user-name">Juan Flores Rodriguez</p>
-                <a src="../opciones_de_usuario/opciones_usuario.html">
-                  <img src="../img/boy_256.png" alt="Perfil" class="boy-img">
-                </a>
+                <div class="dropdown">
+                    <img class="boy-img" src="../img/boy_256.png" alt="Perfil">
+                    <div class="dropdown-content">
+                    <ul class="header-opciones">
+                        <li>
+                            <img class="img-b"src="../img/boy.png">
+                        </li>
+                        <li>
+                            <p>Alfonso</p>
+                        </li>
+                        <li>
+                            <img class="img-b" src="../img/right-arrow.png" width=65 height=60 onclick="history.back()">
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="body-opciones-usuario">
+                        <li>
+                            <p class="p-list">Mi avatar</p>
+                            <a href="../pages/avatar.html">
+                                <img class="img-list" src="../img/hombre.png" width=90 height=90>
+                            </a> 
+                        </li>
+                        <li>
+                            <p class="p-list">Mis Logros</p>
+                            <a href="./ventana-de-logros.html">
+                                <img class="img-list" src="../img/logro.png" width=90 height=90>
+                            </a>
+                        </li>
+                        <li>
+                            <p class="p-list">Cerrar Sesion</p>
+                            <a href="../pages/login.html">
+                                <img class="img-list" src="../img/log-out.png" width=90 height=90>
+                            </a>    
+                        </li>
+                    </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <hr>
-        <!--FIN HEADER-->
 
         <div class="main-card">
 

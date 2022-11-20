@@ -8,7 +8,7 @@ body{
 }
 
 .second-card {
-    height: 100vh;
+    height: auto;
 }
 
 p, strong {
