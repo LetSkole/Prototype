@@ -93,10 +93,10 @@ p, strong {
     height: 180px;
     display: block;
     margin-top: 8px;
-    margin-left: auto;
-    margin-right: auto;
-
-    background: #D9D9D9;
+    padding: 20px;
+    background-image: url("../img/pizarra.png");
+    background-repeat: no-repeat;
+    background-size: 100% 180px;
 }
 /*FIN PANTALLA JUEGO*/
 
@@ -280,4 +280,24 @@ p, strong {
 
 .link-compartir {
     color: #41ADFC;
+}
+
+/* Juego */
+li {
+    color: white;
+    font-size: small;
+}
+
+h4 {
+    color: white;
+}
+
+#operation {
+    color: white;
+    font-size: large;
+}
+
+#startBtn {
+    padding: 5px;
+
 }

@@ -26,6 +26,13 @@
         }
 
         function startGame() {
+
+            timeLeft = 60;
+            timerInterval;
+            scoreCorrect = 0;
+            scoreWrong = 0;
+            correctAnswer = 0;
+            
             document.getElementById("btn1").disabled = false;
             document.getElementById("btn2").disabled = false;
             document.getElementById("btn3").disabled = false;
@@ -40,10 +47,11 @@
             
             timerInterval = setInterval(function(){
                 timeLeft -= 1;
-                timeDisplay.innerHTML = "Time Left: " + timeLeft; 
+                timeDisplay.innerHTML = "Tiempo restante: " + timeLeft; 
                 if(timeLeft == 0) {
                     clearInterval(timerInterval);
-
+                    document.getElementById("startBtn").disabled=false;
+        
                     document.getElementById("btn1").disabled = true;
                     document.getElementById("btn2").disabled = true;
                     document.getElementById("btn3").disabled = true;
@@ -102,8 +110,8 @@
             if (answer == correctAnswer) scoreCorrect += 1;
             else scoreWrong += 1;
             
-            document.getElementById("scoreCorrect").innerHTML = "Correct score: " + scoreCorrect;
-            document.getElementById("scoreWrong").innerHTML = "Wrong score: " + scoreWrong;
+            document.getElementById("scoreCorrect").innerHTML = "Respuestas correctas: " + scoreCorrect;
+            document.getElementById("scoreWrong").innerHTML = "Respuestas incorrectas: " + scoreWrong;
             
             nextQuestion();
         }
@@ -189,10 +197,10 @@
             <!-- Game was modified from (Mr. Soderquist): https://www.youtube.com/watch?v=lrInxLh4Hyg -->
             <div class="col-12 col-md-7 pantalla-juego">
                 <ul class="row no-list">
-                    <li class="col-3"><button id="startBtn" onclick="startGame()">START</button></li>
-                    <li id="scoreCorrect" class="col-3">Correct answers: 0</li>
-                    <li id="scoreWrong" class="col-3">Wrong answers: 0</li>
-                    <li id="timeDisplay" class="col-3" hidden>Time left: 60</li>
+                    <li class="col-3"><button id="startBtn" onclick="startGame()">Inicio</button></li>
+                    <li id="scoreCorrect" class="col-3">Respuestas correctas: 0</li>
+                    <li id="scoreWrong" class="col-3">Respuestas incorrectas: 0</li>
+                    <li id="timeDisplay" class="col-3" hidden>Tiempo restante: 60</li>
                 </ul>
                 <h4>¿Cuál es la respuesta correcta?</h4>
                 <div class="row">
