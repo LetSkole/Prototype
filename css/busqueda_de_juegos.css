@@ -1,14 +1,26 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
 
 body{
     font-family: "Roboto",sans-serif;
 }
 
+p {
+    text-align: center;
+    font-size: small;
+}
 
+.second-card {
+    height: 100vh;
+}
+
+.search {
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    font-size: small;
+}
 /*INICIO HEADER*/
 
 .nav{
@@ -81,15 +93,6 @@ body{
     align-items: center;
     text-align: center;
 }
-.linea{
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 100%;
-    bottom: 0%;
-
-    border: 1px solid #000000;
-}
 /*FIN HEADER*/
 
 .search {
@@ -110,6 +113,7 @@ body{
     display: inline-block;
     width: 100px;
     color: #000000;
+    font-size: small;
 }
 
 .contenedor {

@@ -2,8 +2,8 @@
 
 /* carta responsive */
 .main-card {
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     background-color: white;
     display: block;
     position: relative;
@@ -12,8 +12,8 @@
 }
 
 .second-card {
-    height: 100vh;
     width: 100vw;
+    height: 90vh;
     padding: 20px;
     background-color: white;
     display: block;
@@ -56,6 +56,10 @@
     margin-right: 20px;
 }
 
+.linea{
+    border-top: 2px solid black;
+}
+
 /* Clases genéricas como listo sin estilo o texto centrado */
 .no-list{
   list-style: none;
@@ -87,8 +91,6 @@
     max-width: 180px;
     margin-left: auto;
     margin-right: auto;
-
-
 }
 
 .game-img{
@@ -108,8 +110,8 @@
 }
 
 .boy-img {
-    width: 50px;
-    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 /* Flecha right-arrow & back-arrow */
@@ -146,6 +148,10 @@
     padding: 5px;
 }
 
+.aside {
+    display: none;
+}
+
 /* Navbar */
 .navbar {
     background-color: gainsboro;
@@ -153,6 +159,14 @@
 
 
 /* button */
+.bottom-button {
+    position: absolute;
+    width: 90%;
+    bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .button-a {
     text-align: center;
     text-decoration: none;
@@ -179,19 +193,36 @@
 
 .button-cargar-mas {
     width: 120px;
-    font-size: 0.8em;
-    position: static;
     background-color: rgba(211,195,255,0.53);
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 10px;
 }
 
 .button-regresar {
     width: 100px;
-    position: static;
     background-color: rgba(211,195,255,0.53);
-    margin-left: auto;
-    margin-right: auto;
+}
+
+/* Dropdown */
+/* Drowpdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -150px;
+    top: 20px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* .button-regresar {
@@ -220,8 +251,25 @@
     .title{
         margin-right: 85px;
     }
+
+    .game-img{
+        max-width: 70px;
+        max-height: 70px;
+    }
     
+    .game-img-big {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .boy-img{
+        max-width: 70px;
+        max-height: 70px;
+
+    }
 }
+
+
 /* For tablets: */
 @media only screen and (min-width: 600px) {}
 
@@ -236,29 +284,21 @@
     }
     .second-card{
         width: 94vw;
+        height: 75vh;
         margin-top: 5vh;
         margin-bottom: 5vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+
         border: 1px solid black;
         border-radius: 50px;
     }
     .user-name {
         display: inline;
     }
-    .button-regresar {
-        position: absolute;
-        background-color: rgba(211,195,255,0.53);
-        bottom: 50px;
-        right: 50px;
-    }
-    .button-cargar-mas {
-        position: absolute;
-        background-color: rgba(211,195,255,0.53);
-        bottom: 50px;
-        right: 180px;
-    }
-
+    
     p{
-        font-size: 22px;  
+        font-size: 18px;  
     }
     label{
         font-size: 22px;
@@ -275,7 +315,6 @@
     }
     .logo-img{
         width: 224px;
-        margin-top: 10%;
     }
     .size2{
         font-size: 25px;
@@ -283,5 +322,7 @@
     .title{
         margin-right: 115px;
     }
-    
+    .aside {
+        display: block;
+    }
 }

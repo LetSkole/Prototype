@@ -10,19 +10,28 @@
 } */
 
 .card-game {
-    text-align: center;    
-    border: 2px solid white;
+    text-align: center;
     border-radius: 5px;
-    height: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .card-game:hover, .card-game:active {
     box-shadow: 0px 0px 10px gray;
 }
 
+.card-flat {
+    border: 1px solid white;
+    border-radius: 5px;
+}
 
-.option:hover, .option:active {
-    background-color: black;
+.card-flat:hover, .card-flat:active {
+    box-shadow: 0px 0px 10px gray;
+}
+
+.option-game {
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 /*INICIO HEADER*/
@@ -62,16 +71,6 @@
     border-radius: 8px;
 }
 
-.arrow{
-    position: absolute;
-    width: 38.94px;
-    height: 31px;
-    left: 10%;
-    top: 5%;
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-}
 .boy{
     position: absolute;
     width: 73px;
@@ -97,15 +96,7 @@
     align-items: center;
     text-align: center;
 }
-.linea{
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 100%;
-    bottom: 0%;
 
-    border: 1px solid #000000;
-}
 /*FIN HEADER*/
 
 .contenedor {
@@ -127,4 +118,14 @@
 .button {
     background-color: rgba(211, 196, 255, 0.53);
     padding: 5px;
+}
+
+@media (max-width: 767px) {
+    .juegos-body{
+        background-color: white;
+    }
+    .option-game {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }

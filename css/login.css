@@ -16,3 +16,19 @@ input[type="checkbox"] {
     color:black;
     background-color: rgba(0, 214, 201, 0.1); 
 }
+
+.logo-img {
+    margin-top: 25%;
+}
+
+@media (max-width: 767px) {
+    .login-body{
+        background-color: white;
+    }
+}
+
+@media (min-width: 768px) {
+    .input-text {
+        margin-bottom: 10px;
+    }
+}
